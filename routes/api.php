@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::group(array(), function () {
+Route::group(['middleware' => ['App\Http\Middleware\Cors']], function () {
     Route::get('/', "App\Http\Controllers\ComentariosController@index");
     Route::get('/comentarios/$id', "App\Http\Controllers\ComentariosController@show");
     Route::post('/comentarios',"App\Http\Controllers\ComentariosController@store");
