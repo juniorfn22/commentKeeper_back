@@ -57,7 +57,7 @@ class ComentariosController extends Controller
 
         if (!$comentarios) {
             return response()->json([
-                'message' => 'Comentário não encontrado',
+                'message' => 'Comentário não pode ser encontrado',
             ], 404);
         }
 
